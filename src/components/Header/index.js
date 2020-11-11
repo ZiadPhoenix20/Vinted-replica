@@ -3,7 +3,8 @@ import React from "react";
 const Header = () => {
   return (
     <div>
-      <p>logo</p>
+      <span>logo</span>
+      <input type="text" />
       <button>s'incrire</button>
       <button>se connecter</button>
       <button>vends tes articles</button>
