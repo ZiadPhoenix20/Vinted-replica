@@ -1,19 +1,25 @@
 import React from "react";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const Product = ({ data }) => {
-  // console.log(data);
+  const productId = data._id;
+  // console.log(productId);
   return (
-    <div className="Product">
+    <div>
       <p className="user">
-        <img src={console.log(data.owner.account.avatar.url)} alt="avatar" />
-        {console.log(data.owner.account.username)}
+        <img src={data.owner.account.avatar.url} alt="avatar" />
+        {data.owner.account.username}
       </p>
-      <img src={data.product_image.url} alt="" />
-      <p>{data.product_price} $</p>
-      {data.product_details.map((item, index) => {
-        return <p key={index}>{item.TAILLE}</p>;
-      })}
+      <Link to={`/Offer/${productId}`}>
+        <div className="Product">
+          <img src={data.product_image.url} alt="" />
+          <p>{data.product_price} $</p>
+          {data.product_details.map((item, index) => {
+            return <p key={index}>{item.TAILLE}</p>;
+          })}
+        </div>
+      </Link>
     </div>
   );
 };
