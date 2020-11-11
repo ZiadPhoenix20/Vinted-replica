@@ -14,7 +14,7 @@ const Home = () => {
       const response = await axios.get(
         "https://lereacteur-vinted-api.herokuapp.com/offers"
       );
-      console.log(response.data);
+      //   console.log(response.data);
       setData(response.data);
       setisLoading(false);
     } catch (error) {
@@ -33,6 +33,7 @@ const Home = () => {
       <Header />
       <FirstSection />
       <Offers data={data} />
+      {console.log(data)}
     </div>
   );
 };
