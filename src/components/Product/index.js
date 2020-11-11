@@ -5,7 +5,7 @@ const Product = ({ data }) => {
   // console.log(data);
   return (
     <div className="Product">
-      {/* <p className="user">
+      <p className="user">
         <img src={console.log(data.owner.account.avatar.url)} alt="avatar" />
         {console.log(data.owner.account.username)}
       </p>
@@ -13,7 +13,7 @@ const Product = ({ data }) => {
       <p>{data.product_price} $</p>
       {data.product_details.map((item, index) => {
         return <p key={index}>{item.TAILLE}</p>;
-      })} */}
+      })}
     </div>
   );
 };
