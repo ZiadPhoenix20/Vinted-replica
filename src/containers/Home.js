@@ -33,7 +33,6 @@ const Home = () => {
       <Header />
       <FirstSection />
       <Offers data={data} />
-      {console.log(data)}
     </div>
   );
 };

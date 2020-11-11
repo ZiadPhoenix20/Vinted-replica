@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 
 const Product = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   return (
     <div className="Product">
       {/* <p className="user">
