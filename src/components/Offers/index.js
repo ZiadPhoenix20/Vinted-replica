@@ -1,17 +1,20 @@
 import React from "react";
-import Product from "../Product";
 import "./index.css";
-// import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Offers = ({ data }) => {
-  //   const { id } = useParams;
-  //   console.log(id);
-  console.log(data);
+  //   console.log(data);
   return (
     <div className="Offers">
-      {data.offers.map((item, index) => {
-        return <Product key={index} data={item} />;
-      })}
+      <div>
+        {data.offers.map((offer, index) => {
+          return (
+            <Link to={`/offer/${offer._id}`} key={offer._id}>
+              <div>{offer.product_name}</div>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };

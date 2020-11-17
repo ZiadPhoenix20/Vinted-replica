@@ -11,7 +11,7 @@ const Product = ({ data }) => {
         <img src={data.owner.account.avatar.url} alt="avatar" />
         {data.owner.account.username}
       </p>
-      <Link to={`/Offer/${productId}`}>
+      <Link to={`/offer/${productId}`}>
         <div className="Product">
           <img src={data.product_image.url} alt="" />
           <p>{data.product_price} $</p>
